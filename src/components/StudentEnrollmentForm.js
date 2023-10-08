@@ -1,14 +1,22 @@
-
-import React, { useState } from 'react';
-import { Container, Typography, TextField, Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import React, { useState } from "react";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+} from "@mui/material";
 
 function StudentEnrollmentForm({ onSubmit }) {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    age: '',
-    gender: 'male',
-    course: '',
+    name: "",
+    email: "",
+    age: "",
+    gender: "male",
+    course: "",
   });
 
   const handleChange = (e) => {
@@ -23,7 +31,7 @@ function StudentEnrollmentForm({ onSubmit }) {
 
   return (
     <Container>
-      <Typography variant="h4">Student Enrollment Form</Typography>
+      <Typography variant="h4"></Typography>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Name"
@@ -33,6 +41,7 @@ function StudentEnrollmentForm({ onSubmit }) {
           value={formData.name}
           onChange={handleChange}
         />
+        <br></br>
         <TextField
           label="Email"
           variant="outlined"
@@ -42,6 +51,7 @@ function StudentEnrollmentForm({ onSubmit }) {
           value={formData.email}
           onChange={handleChange}
         />
+        <br></br>
         <TextField
           label="Age"
           variant="outlined"
@@ -51,6 +61,7 @@ function StudentEnrollmentForm({ onSubmit }) {
           value={formData.age}
           onChange={handleChange}
         />
+        <br></br>
         <FormControl fullWidth variant="outlined">
           <InputLabel>Gender</InputLabel>
           <Select
@@ -64,6 +75,7 @@ function StudentEnrollmentForm({ onSubmit }) {
             <MenuItem value="other">Other</MenuItem>
           </Select>
         </FormControl>
+        <br></br>
         <TextField
           label="Course"
           variant="outlined"
@@ -72,6 +84,7 @@ function StudentEnrollmentForm({ onSubmit }) {
           value={formData.course}
           onChange={handleChange}
         />
+        <br></br>
         <Button type="submit" variant="contained" color="primary">
           Submit
         </Button>
